@@ -1,0 +1,7 @@
+[1_constructors_and_prototypes 3987178] add addresses, not displaying
+ 6 files changed, 21347 insertions(+), 9 deletions(-)
+ create mode 100644 css/bootstrap.css
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+ create mode 100644 js/jquery-3.5.1.js
+ rewrite js/scripts.js (78%)

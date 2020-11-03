@@ -77,8 +77,12 @@ function showContact(contactId) {
   $(".last-name").html(contact.lastName);
   $(".phone-number").html(contact.phoneNumber);
   $(".email").html(contact.email);
-  $(".home-address").html(Address.home); //address.home address.work
-  //$(".work-address").html(address.work);//// fix this
+
+  contact.addresses.forEach(function (address) {
+    $(".home-address").text(address.home);
+    $(".work-address").text(address.work);
+  });
+
   let buttons = $("#buttons");
   buttons.empty();
   buttons.append(
@@ -120,6 +124,7 @@ $(document).ready(function () {
       inputtedEmail
     );
     newContact.addAddress(newAddresses);
+    console.log(newContact);
     addressBook.addContact(newContact);
     displayContactDetails(addressBook);
   });
